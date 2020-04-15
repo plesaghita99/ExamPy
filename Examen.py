@@ -1,11 +1,6 @@
 """
 Modulul următor are ca scop diferentierea mașinilor produse dintro  fabrica intr-o singura zi in loturi (pana in 20), in funcție de poziția volanului  și de serie
 """
- # Documentatie: 20p
- # 	a) adaugati type hits 5p
-	# a) documentati modulul 5p
-	# b) documentati clasele 5p
-	# c) documentati metodele 5p
 class Fabrica:
     """
     O clasa care reprezinta o fabrica

@@ -1,5 +1,5 @@
 """
-Modulul următor are ca scop diferentierea mașinilor produse intr-o singura zi in loturi (pana in 20), in funcție de poziția volanului  și de serie
+Modulul următor are ca scop diferentierea mașinilor produse dintro  fabrica intr-o singura zi in loturi (pana in 20), in funcție de poziția volanului  și de serie
 """
  # Documentatie: 20p
  # 	a) adaugati type hits 5p
@@ -18,17 +18,6 @@ class Fabrica:
         seria de inceput
     numar_total : int
         numarul de bucati
-
-    Metode
-    ------
-    volan_pe_stanga()
-        Functia primeste o valoare si o verifica daca este para, daca este para o incrementeaza pentru a fi impara, dupa care initializeaza valoarea maxima si returneaza
-        o lista mergand cu step-ul de 2
-    volan_pe_dreapta()
-        Functia primeste o valoare si o verifica daca este impara, daca este para o incrementeaza pentru a fi para,dupa care initializeaza valoarea maxima si returneaza
-        o lista mergand cu step-ul de 2
-
-
     """
   def __init__(self, start_serie:int, numar_total:int):
     # Salveaza valorile
@@ -36,6 +25,10 @@ class Fabrica:
     self.numar_total = numar_total
 
   def volan_pe_stanga(self) -> int:
+    """Functia primeste o valoare si o verifica daca este para, daca este para o incrementeaza pentru a fi impara
+
+    :return: returneaza o lista mergand cu step-ul de 2
+    """
     # Initializeaza valoare de la care se porneste
     start = self.start_serie
     # Daca este para se incrementeaza pentru a fi impara
@@ -47,6 +40,11 @@ class Fabrica:
     return list(range(start, final))[::2]
 
   def volan_pe_dreapta(self) -> int:
+    """
+    Functia primeste o valoare si o verifica daca este impara, daca este para o incrementeaza pentru a fi para
+
+    :return: returneaza o lista mergand cu step-ul de 2
+    """
     # Initializeaza valoare de la care se porneste
     start = self.start_serie
     # Daca este impara se incrementeaza pentru a fi para

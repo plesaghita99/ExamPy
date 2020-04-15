@@ -44,7 +44,7 @@ class Fabrica:
     # Initializeaza valoarea maxima
     final = self.start_serie + self.numar_total
     # Se returneaza o lista - mergand din 2 in 2
-    return list(range(start, final))[::2] #o noua lista care merge din step in 2
+    return list(range(start, final))[::2]
 
   def volan_pe_dreapta(self) -> int:
     # Initializeaza valoare de la care se porneste
@@ -61,8 +61,6 @@ class Fabrica:
     # Initializare seria de la care se porneste
     self.serie_generata = self.start_serie
     return self
-
-    #in next am nevoie sa cunosc tot timpul seriile care au fost generate si sa stiude unde sa continui
 
   def __next__(self) -> int:
     # Numarul maxim la care poate ajunge seria

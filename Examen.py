@@ -1,6 +1,9 @@
 """
-Modulul următor are ca scop diferentierea mașinilor produse dintro  fabrica intr-o singura zi in loturi (pana in 20), in funcție de poziția volanului  și de serie
+
+Modulul următor are ca scop diferentierea mașinilor produse dintr-o  fabrica intr-o singura zi in loturi (pana in 20), in funcție de poziția volanului  și de serie.
+
 """
+
 class Fabrica:
     """
     O clasa care reprezinta o fabrica
@@ -9,9 +12,9 @@ class Fabrica:
 
     Atribute
     ---------
-    start_serie : int
+    :param start_serie : int
         seria de inceput
-    numar_total : int
+    :param numar_total : int
         numarul de bucati
     """
   def __init__(self, start_serie:int, numar_total:int):
@@ -24,7 +27,7 @@ class Fabrica:
 
     :return: returneaza o lista mergand cu step-ul de 2
     """
-    # Initializeaza valoare de la care se porneste
+    # Initializeaza valoarea de la care se porneste
     start = self.start_serie
     # Daca este para se incrementeaza pentru a fi impara
     if start % 2 == 0:
@@ -60,7 +63,7 @@ class Fabrica:
     maxim = self.start_serie + self.numar_total
     # Se testeaza daca s-a generat si ultima serie
     if self.serie_generata < maxim:
-      # Se verifica daca poatae genera un lot intreg - 20 de serii
+      # Se verifica daca poate genera un lot intreg - 20 de serii
       if self.serie_generata + 20 < maxim:
         start = self.serie_generata
         stop = self.serie_generata + 20
